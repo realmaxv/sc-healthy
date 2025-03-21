@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+@keyframes fadeLeft {
+    0% {
+        transform: translateX(-100px);
+
+        opacity: 0;
+    }
+
+    100% {
+        tranform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        transform: translateX(100px);
+
+        opacity: 0;
+    }
+
+    100% {
+        tranform: translateX(0);
+        opacity: 1;
+    }
+}
 
 img {
     max-width: 100%;
@@ -40,4 +65,16 @@ img {
 input,
 select {
     @apply bg-lime-50 w-full text-center md:text-left md:pl-8;
+}
+
+
+.in-view {
+    animation: fadeLeft 0.4s 0.2s both;
+
+
+}
+
+
+.not-in-view {
+    opacity: 0;
 }
