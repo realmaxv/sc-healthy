@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+
+img {
+    max-width: 100%;
+}
+
+.item-news {
+    @apply rounded-2xl p-2 px-10 flex flex-col items-center gap-4 justify-around bg-[#e5f5bd9c] m-3;
+
+}
+
+.card-item {
+    @apply rounded-2xl p-2 px-10 flex flex-col items-center gap-4 justify-around bg-[#e5f5bd9c] mx-3;
+
+}
+
+.item-news h3 {
+    @apply font-bold text-center;
+}
+
+.item-news p {
+    @apply font-light;
+}
+
+.item-news a,
+.plan-btn {
+    @apply p-2 border bg-gradient-to-l from-lime-200 via-emerald-200 to-teal-400 rounded font-semibold;
+}
+
+.item {
+    @apply flex items-center space-x-4 mb-2;
+}
+
+.item h3 {
+    @apply font-bold;
+}
+
+
+input,
+select {
+    @apply bg-lime-50 w-full text-center md:text-left md:pl-8;
+}

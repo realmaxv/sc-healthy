@@ -42,7 +42,7 @@ function userSearch(input: string, inputUserLang: string, sort: string) {
             articleBtn.innerText = "Zum Artikel";
             articleBtn.href = element.url;
 
-            newArticle.append(newHeadline, description, image, articleBtn);
+            newArticle.append(newHeadline, image, description, articleBtn);
             console.log(newArticle);
             blogOutputNews.appendChild(newArticle);
           } else {
