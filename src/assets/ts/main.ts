@@ -42,7 +42,7 @@ function userSearch(input: string, inputUserLang: string, sort: string) {
             articleBtn.innerText = "Zum Artikel";
             articleBtn.href = element.url;
 
-            newArticle.append(newHeadline, description, image, articleBtn);
+            newArticle.append(newHeadline, image, description, articleBtn);
             console.log(newArticle);
             blogOutputNews.appendChild(newArticle);
           } else {
@@ -88,4 +88,28 @@ calculateBtn.addEventListener("click", () => {
   calculatorOutput.innerText = `Gesamtkalorien am Tag: ${totalCalories} kcal`;
 
   console.log(totalCalories);
+});
+
+const intersectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        entry.target.classList.remove("not-in-view");
+      } else {
+        entry.target.classList.remove("in-view");
+        entry.target.classList.add("not-in-view");
+      }
+    });
+  },
+  {
+    rootMargin: "0px",
+    threshold: [0, 0.1, 1],
+  }
+);
+
+const tags = document.querySelectorAll(".left, .right");
+
+tags.forEach((tag) => {
+  intersectionObserver.observe(tag);
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -8,32 +8,62 @@
       type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/tailwind.css" />
     <title>Healthy App</title>
   </head>
-  <body>
-    <header id="top">
-      <div class="nav-banner">
-        <img src="./src/assets/images/logo headline.png" alt="Logo-head" />
+  <body class="bg-teal-50 text-teal-950">
+    <header
+      class="flex items-center justify-around flex-col bg-teal-950 pt-2 pb-2"
+      id="top"
+    >
+      <div class="nav-banner flex items-center justify-center">
+        <img
+          class="w-[92%]"
+          src="./src/assets/images/logo headline.png"
+          alt="Logo-head"
+        />
       </div>
-      <div class="navbar">
-        <img src="./src/assets/images/Logo green70.png" alt="Logo" />
-        <div class="navbar-links">
+      <div
+        class="navbar px-2 py-6 sm:px-4 lg:px-[80px] flex w-screen justify-between items-center bg-teal-950"
+      >
+        <img class="" src="./src/assets/images/Logo green70.png" alt="Logo" />
+        <div
+          class="navbar-links hidden md:flex md:justify-evenly text-white space-x-4 items-center pt-2 pb-2"
+        >
           <a href="#">Home</a><a href="#">Pricing</a><a href="#">About</a
           ><a href="#">Blog</a><a href="#">Team</a><a href="#">Process</a
-          ><a href="#" class="contact">Contact Us</a>
+          ><a href="#" class="contact p-2 bg-green-500 rounded">Contact Us</a>
         </div>
+        <img
+          class="flex md:hidden"
+          src="./src/assets/images/hammenu.svg"
+          alt="menu"
+        />
       </div>
     </header>
     <main>
-      <section class="header-section">
-        <img src="./src/assets/images/header_img.jpg" alt="header-img-woman" />
+      <section
+        class="header-section flex flex-col sm:flex-row space-x-4 md:space-y-4"
+      >
+        <img
+          class="rounded-bl-4xl w-screen rounded-b-4xl md:rounded md:w-[60%]"
+          src="./src/assets/images/header_img.jpg"
+          alt="header-img-woman"
+        />
 
-        <div class="header-article">
-          <div class="header-a-wrapper">
-            <h2>Transform Your ❤️ Health with</h2>
-            <h1>Personalized Nutrition Coaching</h1>
-            <p>
+        <div
+          class="header-article flex flex-col-reverse items-center lg:items-start md:flex-col"
+        >
+          <div
+            class="header-a-wrapper flex flex-col space-y-4 text-center p-6 sm:px-0 md:items-center md:justify-center lg:space-y-16 lg:p-4"
+          >
+            <h2 class="text-2xl lg:text-3xl border-lime-400 border-b-3 pb-2">
+              Transform Your ❤️ Health with
+            </h2>
+            <h1 class="text-3xl font-bold lg:text-5xl">
+              Personalized Nutrition Coaching
+            </h1>
+            <p class="lg:text-2xl font-light">
               Welcome to Nutritionist, your partner in achieving optimal health
               through personalized nutrition coaching. Our certified
               nutritionists are here to guide you on your weight loss journey,
@@ -41,26 +71,27 @@
               transformation today and experience the power of personalized
               nutrition coaching.
             </p>
-            <div class="header-buttons">
-              <a href="#" class="single-heaeder-btn">Get Starter Today</a>
-              <a href="#" class="single-heaeder-btn" id="single">Book a Demo</a>
+            <div
+              class="header-buttons mt-2 flex space-x-4 items-center justify-center"
+            >
+              <a
+                href="#"
+                class="single-heaeder-btn text p-2 bg-lime-300 rounded"
+                >Get Starter Today</a
+              >
+              <a
+                href="#"
+                class="single-heaeder-btn p-2 border-lime-300 border rounded"
+                id="single"
+                >Book a Demo</a
+              >
             </div>
           </div>
-          <div class="persons">
-            <div class="persons-img-wrapper">
-              <img
-                src="./src/assets/images/circle one .jpg"
-                alt="one"
-                class="image1"
-              /><img
-                src="./src/assets/images/circle two.jpg"
-                alt="two"
-                class="image2"
-              /><img
-                src="./src/assets/images/circle three.jpg"
-                class="image3"
-                alt="three"
-              />
+          <div
+            class="persons flex flex-col items-center mt-[-25px] sm:mt-4 sm:flex-row"
+          >
+            <div class="persons-img-wrapper animate">
+              <img src="./src/assets/images/Container.png" alt="" />
             </div>
             <p>430+ Happy Customers</p>
           </div>
@@ -68,28 +99,34 @@
         <div></div>
       </section>
 
-      <section class="features">
-        <div class="headline">
-          <h2>Features</h2>
-          <p>
+      <section class="features flex items-center flex-col justify-center">
+        <div
+          class="headline flex flex-col items-center justify-center text-center mb-8"
+        >
+          <h2 class="text-2xl font-bold mb-2">Features</h2>
+          <p class="p-2">
             Welcome to the Feature Section of Nutritionist, your ultimate
             destination for all things nutrition and wellness.
           </p>
         </div>
-        <div class="cards">
-          <div class="card-item">
+        <div
+          class="cards flex flex-col items-center gap-6 justify-center md:grid md:grid-cols-2"
+        >
+          <div class="card-item left">
             <div class="item">
               <img src="./src/assets/images/Icon Container.png" alt="icon1" />
-              <h3>Personalized Nutrition Plans</h3>
+              <h3 class="font-bold text-nowrap">
+                Personalized Nutrition Plans
+              </h3>
             </div>
-            <p>
+            <p class="text-left">
               Receive a tailored nutrition plan designed specifically for your
               body and goals. Our certified nutritionists will consider your
               unique needs, dietary preferences, and health conditions to create
               a plan that suits you best.
             </p>
           </div>
-          <div class="card-item">
+          <div class="card-item right">
             <div class="item">
               <img src="./src/assets/images/Icon Container-1.png" alt="icon2" />
               <h3>Guidance from Certified Nutritionists</h3>
@@ -101,7 +138,7 @@
               motivated as you work towards your goals.
             </p>
           </div>
-          <div class="card-item">
+          <div class="card-item left">
             <div class="item">
               <img src="./src/assets/images/Icon Container-2.png" alt="icon3" />
               <h3>Food Tracking and Analysis</h3>
@@ -113,7 +150,7 @@
               make personalized recommendations.
             </p>
           </div>
-          <div class="card-item">
+          <div class="card-item right">
             <div class="item">
               <img src="./src/assets/images/Icon Container-3.png" alt="icon4" />
               <h3>Meal Planning and Recipes</h3>
@@ -125,7 +162,7 @@
               and enjoy nutritious meals.
             </p>
           </div>
-          <div class="card-item">
+          <div class="card-item left">
             <div class="item">
               <img src="./src/assets/images/Icon Container-4.png" alt="icon5" />
               <h3>Lifestyle and Behavior Coaching</h3>
@@ -137,7 +174,7 @@
               obstacles along the way.
             </p>
           </div>
-          <div class="card-item">
+          <div class="card-item right">
             <div class="item">
               <img src="./src/assets/images/Icon Container-5.png" alt="icon6" />
               <h3>Nutritional Education and Workshops</h3>
@@ -152,9 +189,11 @@
         </div>
       </section>
       <section class="features blog">
-        <div class="headline">
-          <h2>Our Blogs</h2>
-          <p>
+        <div
+          class="headline flex flex-col items-center justify-center text-center mb-8 mt-8"
+        >
+          <h2 class="text-2xl font-bold mb-2">Our Blogs</h2>
+          <p class="p-2">
             Our blog is a treasure trove of informative and engaging articles
             written by our team of nutritionists, dietitians, and wellness
             experts. Here's what you can expect from our blog.
@@ -162,34 +201,40 @@
         </div>
 
         <div class="blog-output-news" id="blog-output-news">
-          <div id="dynamic-items"></div>
+          <div class="md:grid md:grid-cols-2" id="dynamic-items"></div>
         </div>
       </section>
       <section class="features calculator">
-        <div class="headline">
-          <h2>Test your daily Calorie Requirement</h2>
-          <p>
+        <div
+          class="headline flex flex-col items-center justify-center text-center mb-8 mt-8"
+        >
+          <h2 class="text-2xl font-bold mb-2">
+            Test your daily Calorie Requirement
+          </h2>
+          <p class="p-2">
             To determine your daily calorie requirement, we need some
             information about your age, gender, weight, height and activity
             level. Enter this information to calculate your individual
             requirements.
           </p>
         </div>
-        <div class="blog-output-news calculate">
+        <div
+          class="blog-output-news calculate border border-lime-200 rounded-2xl bg-lime-100 p-2 m-2 md:grid md:grid-cols-2"
+        >
           <div class="card-item">
-            <p for="body-size">Body size (in cm)</p>
+            <p for="body-size" class="font-bold">Body size (in cm)</p>
             <input type="number" id="body-size" class="input-field" />
           </div>
           <div class="card-item">
-            <p>Age</p>
+            <p class="font-bold">Age</p>
             <input type="number" id="age" class="input-field" />
           </div>
           <div class="card-item">
-            <p>Weight</p>
+            <p class="font-bold">Weight</p>
             <input type="number" id="weight" class="input-field" />
           </div>
           <div class="card-item">
-            <p>Activity</p>
+            <p class="font-bold">Activity</p>
             <select name="activity" id="activity" class="input-field">
               <option value="0.95">Schlafen</option>
               <option selected="true" value="1.2">
@@ -214,9 +259,11 @@
               </option>
             </select>
           </div>
-          <div class="input-radio">
-            <p>Gender</p>
-            <form class="radio-btn">
+          <div class="input-radio flex flex-col text-center">
+            <fieldset
+              class="radio-btn flex items-center justify-center border rounded-3xl"
+            >
+              <legend class="font-bold">Gender</legend>
               <div>
                 <input
                   name="gender"
@@ -231,87 +278,108 @@
                 <input name="gender" type="radio" id="male" value="male" />
                 <label for="male">Male</label>
               </div>
-            </form>
+            </fieldset>
           </div>
-          <a class="plan-btn" id="calculate-btn">Calculate</a>
+          <a
+            class="plan-btn shadow rounded-3xl shadow-lime-100 flex items-center justify-center m-6"
+            id="calculate-btn"
+            >Calculate</a
+          >
         </div>
         <div id="calculator-output"></div>
       </section>
       <section>
-        <div class="headline">
-          <h2>Our Pricing</h2>
-          <p>
+        <div class="headline card-item mb-4 text-center">
+          <h2 class="text-2xl font-bold">Our Pricing</h2>
+          <p class="font-light">
             We outline our flexible and affordable options to support you on
             your journey to optimal health and nutrition. We believe that
             everyone deserves access to personalized nutrition guidance and
             resources
           </p>
           <div class="header-buttons" id="btns">
-            <a href="#" class="single-heaeder-btn" id="monthly">Monthly</a>
-            <a href="#" class="single-heaeder-btn" id="yearly">Yearly</a>
+            <a href="#" class="single-heaeder-btn plan-btn" id="monthly"
+              >Monthly</a
+            >
+            <a href="#" class="single-heaeder-btn plan-btn" id="yearly"
+              >Yearly</a
+            >
           </div>
-          <p>Save 50% on Yearly</p>
+          <p class="font-semibold">Save 50% on Yearly</p>
         </div>
         <div class="plans">
-          <article class="single-plan">
-            <h2>Basic Plan</h2>
-            <p>Up to 50% off on Yearly Plan</p>
-            <p>
+          <article class="single-plan card-item mb-4">
+            <h2 class="font-bold text-2xl">Basic Plan</h2>
+            <p class="font-extralight">Up to 50% off on Yearly Plan</p>
+            <p class="font-light">
               Get started on your health journey with our Basic Plan. It
               includes personalized nutrition coaching, access to our app, meal
               planning assistance, and email support.
             </p>
-            <h3>$49 <small>/month</small></h3>
+            <h3 class="font-semibold text-2xl">$49 <small>/month</small></h3>
             <a href="#" class="plan-btn">Choose Plan</a>
           </article>
-          <article class="single-plan">
-            <h2>Premium Plan</h2>
-            <p>Up to 50% off on Yearly Plan</p>
-            <p>
+          <article class="single-plan card-item mb-4">
+            <h2 class="font-bold text-2xl">Premium Plan</h2>
+            <p class="font-extralight">Up to 50% off on Yearly Plan</p>
+            <p class="font-light">
               Upgrade to our Premium Plan for enhanced features. In addition to
               the Basic Plan, you'll receive video consultations, priority
               support, and personalized recipe recommendations.
             </p>
-            <h3>$79 <small>/month</small></h3>
+            <h3 class="font-semibold text-2xl">$79 <small>/month</small></h3>
             <a href="#" class="plan-btn">Choose Plan</a>
           </article>
-          <article class="single-plan">
-            <h2>Ultimate Plan</h2>
-            <p>Up to 50% off on Yearly Plan</p>
-            <p>
+          <article class="single-plan card-item mb-4">
+            <h2 class="font-bold text-2xl">Ultimate Plan</h2>
+            <p class="font-extralight">Up to 50% off on Yearly Plan</p>
+            <p class="font-light">
               Experience the full benefits of personalized nutrition coaching
               with our Ultimate Plan. Enjoy all the features of the Premium
               Plan, along with 24/7 chat support and exclusive workshops.
             </p>
-            <h3>$99 <small>/month</small></h3>
+            <h3 class="font-semibold text-2xl">$99 <small>/month</small></h3>
             <a href="#" class="plan-btn">Choose Plan</a>
           </article>
         </div>
       </section>
     </main>
-    <footer>
-      <div class="nav-banner">
+    <footer
+      class="flex flex-col items-center w-full bg-teal-950 justify-center p-2"
+    >
+      <div class="footer-nav flex items-center justify-between w-full p-4">
+        <img class="" src="./src/assets/images/Logo green70.png" alt="Logo" />
+
+        <div
+          class="navbar-links text-wrap hidden sm:flex sm:text-amber-50 sm:font-bold sm:space-x-6"
+        >
+          <a href="#">Home</a><a href="#">Pricing</a><a href="#">About</a
+          ><a href="#">Blog</a><a href="#">Team</a><a href="#">Process</a
+          ><a href="#">Contact</a>
+        </div>
+        <div class="to-top flex items-center justify-center gap-6 text-white">
+          <p class="">Go to Top</p>
+          <a href="#top"
+            ><img
+              class="w-10"
+              src="./src/assets/images/to-top.png"
+              alt="to-top-icon"
+          /></a>
+        </div>
+      </div>
+      <div class="nav-banner p-2 bg-teal-950">
         <img
-          src="./src/assets/images/footer_container.jpg"
+          class="hidden md:flex"
+          class="w-[100%]"
+          src="./src/assets/images/logo headline.png"
+          alt="Logo-head"
+        />
+        <img
+          class="md:hidden"
+          src="./src/assets/images/bottom_logo.png"
           alt="Logo-footer"
           id="logo-footer"
         />
-      </div>
-      <div class="footer-bar">
-        <div class="footer-nav">
-          <img src="./src/assets/images/Logo green70.png" alt="Logo" />
-          <div class="navbar-links">
-            <a href="#">Home</a><a href="#">Pricing</a><a href="#">About</a
-            ><a href="#">Blog</a><a href="#">Team</a><a href="#">Process</a
-            ><a href="#">Contact</a>
-          </div>
-          <div class="to-top">
-            <p>Go to Top</p>
-            <a href="#top"
-              ><img src="./src/assets/images/to-top.png" alt="to-top-icon"
-            /></a>
-          </div>
-        </div>
       </div>
     </footer>
     <script type="module" src="./src/assets/ts/main.ts"></script>
